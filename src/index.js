@@ -6,7 +6,9 @@ run();
 async function run() {
     const mode = core.getInput("mode", { required: true })
     let input = core.getInput("in")
-	if (!input) input = ""
+	if (!input) {
+		input = ""
+	}
 
     let result;
     if (mode == "isBlank") {

@@ -16,13 +16,14 @@ async function run() {
     } else if (mode == "parseTeam") {
         result = parseTeam(input)
     }
+	console.log(`Processed input: '${input}'. Result: '${result}'`);
 
     core.setOutput("result", result);
 }
 
-async function isBlank(input) {
+function isBlank(input) {
     return input.trim() == "" ? "true" : "false";
 }
-async function parseTeam(input) {
+function parseTeam(input) {
     return input.substring(input.indexOf("/") + 1, input.length)
 }

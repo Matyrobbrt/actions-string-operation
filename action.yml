@@ -1,7 +1,7 @@
 name: 'String Operations'
 description: 'An action that does string operations'
 inputs:
-  input:
+  in:
     description: 'Input string'
     required: true
   mode:
